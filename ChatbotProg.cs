@@ -105,4 +105,13 @@ static void StartChatbot()
         }
     }
 }
-}
+        //Validate input 
+        static string NormalizeInput(string input)
+        {
+            return Regex.Replace(input.ToLower(), "[^a-z0-9 ]", ""); //It ignores special characters and numbers
+                                                                     //It converts everthing to lower
+            
+        }
+    }
+
+
