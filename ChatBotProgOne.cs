@@ -4,6 +4,19 @@ using System.Speech.Synthesis;
 using System.Linq;
 using System.Threading;
 
+namespace Services
+{
+    //Adds voice to the code
+    class SpeechService
+    {
+        public void Speak(string message)
+        {
+            SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer();
+            speechSynthesizer.SetOutputToDefaultAudioDevice();
+            speechSynthesizer.Speak(message);
+        }
+    }
+
 class Program
 {
     static SpeechService speechService = new SpeechService();
@@ -136,4 +149,5 @@ static void DisplaySectionDivider()
                                                                  //It converts everthing to lower
         
     }
+}
 }
