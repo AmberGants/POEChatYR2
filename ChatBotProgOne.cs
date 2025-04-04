@@ -12,6 +12,13 @@ class Program
     {
         
     }
+    //Add borders to the code
+static void DisplaySectionDivider()
+{
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine("═════════════════════════════════════════════════════════════");
+    Console.ResetColor();
+}
     static void TypeWithDelay(string text, ConsoleColor color, int delay = 50)
 {
     Console.ForegroundColor = color;
