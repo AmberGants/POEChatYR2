@@ -1,4 +1,18 @@
 using System;
+using System.Text.RegularExpressions;
+using System.Speech.Synthesis;
+using System.Linq;
+using System.Threading;
+
+class SpeechService
+{
+    public void Speak(string message)
+    {
+        SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer();
+        speechSynthesizer.SetOutputToDefaultAudioDevice();
+        speechSynthesizer.Speak(message);
+    }
+}
 
 class Program
 {
