@@ -24,6 +24,16 @@ class Program
             Console.WriteLine(asciiArt);
             Console.ResetColor();
         }
+        static void TypeWithDelay(string text, ConsoleColor color, int delay = 50)
+{
+    Console.ForegroundColor = color;
+    foreach (char c in text)
+    {
+        Console.Write(c);
+        Thread.Sleep(delay); // Typing effect
+    }
+    Console.ResetColor();
+}
         //Text-base greeting, user interaction and symbols
 static void StartChatbot()
 {
