@@ -21,7 +21,10 @@ class Program
     static void Main(string[] args)
     {
         DisplayAsciiArt(); //Call the display art method
-    
+        TypeWithDelay("Welcome to the Cybersecurity Awareness Bot.\n", ConsoleColor.Cyan);
+speechService.Speak("Welcome to the Cybersecurity Awareness Bot.");
+DisplaySectionDivider(); //Call the section divider method
+StartChatbot(); //Call the start chatbot method
     }
             //Create cybersecurity-themed symbol
         static void DisplayAsciiArt()
